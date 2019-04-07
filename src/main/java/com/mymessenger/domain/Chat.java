@@ -1,29 +1,64 @@
 package com.mymessenger.domain;
 
 import javax.persistence.*;
-import java.sql.Time;
+//import java.sql.Time;
 
 @Entity
-@Table (name = "chat")
+@Table (name = "chatt")
 public class Chat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ch_id;
+    @Column(name = "ch_id")
+    private Long chId;
     private String ch_name;
-    private int userId;
-    private Time chat_c;
+//    private Long userId;
+    private Long addresseeId;
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
+
+
+//    private Time chat_c;
+
 
     public Chat() {
     }
 
-    public Chat(String ch_name, int userId, Time chat_c) {
-        this.ch_name = ch_name;
-        this.userId = userId;
-        this.chat_c = chat_c;
+    public Chat( User user, Long addresseeId) {
+        this.author = user;
+        this.addresseeId=addresseeId;
+
     }
 
-    public int getCh_id() {
-        return ch_id;
+    public String getAuthorn(){
+        return author.getUsername();
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+
+    public Long getAddresseeId() {
+        return addresseeId;
+    }
+
+    public void setAddresseeId(Long addresseeId) {
+        this.addresseeId = addresseeId;
+    }
+
+    public Long getChId() {
+        return chId;
+    }
+
+    public void setChId(Long ch_id) {
+        this.chId = chId;
     }
 
     public String getCh_name() {
@@ -34,29 +69,20 @@ public class Chat {
         this.ch_name = ch_name;
     }
 
-    public int getUserId() {
-        return userId;
-    }
+//    public Long getUserId() {
+//        return userId;
+//    }
+//
+//    public void setUserId(Long userId) {
+//        this.userId = userId;
+//    }
+//    public Time getChat_c() {
+//        return chat_c;
+//    }
+//
+//    public void setChat_c(Time chat_c) {
+//        this.chat_c = chat_c;
+//    }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 
-    public Time getChat_c() {
-        return chat_c;
-    }
-
-    public void setChat_c(Time chat_c) {
-        this.chat_c = chat_c;
-    }
-
-    @Override
-    public String toString() {
-        return "Chat{" +
-                "ch_id=" + ch_id +
-                ", ch_name='" + ch_name + '\'' +
-                ", userId=" + userId +
-                ", chat_c=" + chat_c +
-                '}';
-    }
 }

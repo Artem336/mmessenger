@@ -1,0 +1,58 @@
+<!--<!DOCTYPE HTML>-->
+<html>
+<head>
+    <title>ChatsM</title>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+</head>
+<body>
+
+<div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Sign Out"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    </form>
+</div>
+
+<div>Username: {{uName}}  Id:{{uId}}</div>
+<div>Create Chats:</div>
+
+<div>
+    <form method="post" action="/chatsm?add">
+        <input type="Long" name="user_id" placeholder="Введите id пользователя" />
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+<div>
+    <form method="post"action="/chatsm?create" >
+        <input type="text" name="chName" placeholder="Введите название чата:" />
+
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <button type="submit">Create</button>
+    </form>
+
+</div>
+
+
+
+{{#window}}
+    {{window}}
+{{/window}}
+
+<div>ChatsM:</div>
+<!--sort id-->
+{{#chatss}}
+    <div>
+        <form><a href="/dialog?chatId={{chIdM}}">
+            <strong >{{chName}}</strong>
+            </a>
+        </form>
+    </div>
+{{/chatss}}
+
+<a href="/chatsm"><button>Back</button></a>
+
+
+
+</body>
+</html>

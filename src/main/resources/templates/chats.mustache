@@ -1,0 +1,49 @@
+<!--<!DOCTYPE HTML>-->
+<html>
+    <head>
+    <title>Chats</title>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+    </head>
+    <body>
+
+        <div>
+            <form action="/logout" method="post">
+                <input type="submit" value="Sign Out"/>
+                <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            </form>
+        </div>
+
+        <div>Username: {{uName}}  Id:{{uId}}</div>
+        <div>Create Chats:</div>
+
+        <div>
+            <form method="post">
+                <input type="Long" name="addresseeId" placeholder="Введите Id получателя" />
+                <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+
+        {{#window}}
+            {{window}}
+        {{/window}}
+
+        <div>Chats:</div>
+        <!--sort id-->
+        {{#chatss}}
+            <div>
+                <form><a href="/dialog?chatId={{chId}}">
+                    <strong >{{ch_name}}</strong>
+                    </a>
+                </form>
+            </div>
+        {{/chatss}}
+
+        <a href="/chats"><button>Back</button></a>
+
+        <a href="/chatsm"><button>ChatsM</button></a>
+
+
+
+    </body>
+</html>

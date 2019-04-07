@@ -1,12 +1,19 @@
 package com.mymessenger.repos;
+import com.mymessenger.domain.User;
 
-import com.mymessenger.domain.Mtest;
+import com.mymessenger.domain.Message;
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
 
-public interface MessageRepo extends CrudRepository<Mtest, Long> {
 
-    List<Mtest> findByTag(String tag);
+
+public interface MessageRepo extends CrudRepository<Message, Long> {
+
+    Iterable<Message> findAll();
+
+    Iterable<Message> findByAuthor(User user);
+    Iterable<Message> findByChatId(Long chatId);
+    //Iterable<Message> findByChIdM(Long chIdM);
+
 
 }

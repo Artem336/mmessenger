@@ -9,23 +9,41 @@ import java.sql.Time;
 public class Message {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int m_id;
-    private String content;
-    private int senderId;
-    private int chatId;
-    private Time timeCreate;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long m_id;
 
+    private String content;
+//    private Long senderId;
+    @Column(name = "chat_id")
+    private Long chatId;
+//    private Time timeCreate;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
 
 
     public Message() {
     }
 
-    public Message(String content, int senderId, int chatId, Time timeCreate) {
+    public Message(String content, User user, Long chatId) {
         this.content = content;
-        this.senderId = senderId;
         this.chatId = chatId;
-        this.timeCreate = timeCreate;
+        this.author =user;
+//        this.timeCreate = timeCreate;
+    }
+
+    public String getAuthorNam(){
+        return author !=null ? author.getUsername(): "<none>";
+    }
+
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
     }
 
     public String getContent() {
@@ -36,41 +54,33 @@ public class Message {
         this.content = content;
     }
 
-    public int getM_id() {
+    public Long getM_id() {
         return m_id;
     }
 
-    public int getSenderId() {
-        return senderId;
-    }
+//    public Long getSenderId() {
+//        return senderId;
+//    }
+//
+//    public void setSenderId(Long senderId) {
+//        this.senderId = senderId;
+//    }
 
-    public void setSenderId(int senderId) {
-        this.senderId = senderId;
-    }
-
-    public int getChatId() {
+    public Long getChatId() {
         return chatId;
     }
 
-    public void setChatId(int chatId) {
+    public void setChatId(Long chatId) {
         this.chatId = chatId;
     }
 
-    public Time getTimeCreate() {
-        return timeCreate;
-    }
+//    public Time getTimeCreate() {
+//        return timeCreate;
+//    }
+//
+//    public void setTimeCreate(Time timeCreate) {
+//        this.timeCreate = timeCreate;
+//    }
 
-    public void setTimeCreate(Time timeCreate) {
-        this.timeCreate = timeCreate;
-    }
 
-    @Override
-    public String toString() {
-        return "Message{" +
-                "m_id=" + m_id +
-                ", senderId=" + senderId +
-                ", chatId=" + chatId +
-                ", timeCreate=" + timeCreate +
-                '}';
-    }
 }
