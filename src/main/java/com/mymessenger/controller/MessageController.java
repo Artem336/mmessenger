@@ -1,6 +1,6 @@
 package com.mymessenger.controller;
 
-import com.mymessenger.domain.Chat;
+
 import com.mymessenger.domain.Message;
 import com.mymessenger.domain.User;
 import com.mymessenger.repos.MessageRepo;

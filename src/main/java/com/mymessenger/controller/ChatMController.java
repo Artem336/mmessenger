@@ -30,6 +30,10 @@ public class ChatMController {
     static Set<User> users = new HashSet<User>();
 
 
+    @GetMapping("/")
+    public String greeting(@AuthenticationPrincipal User user,Map<String, Object> model) {
+        return "greeting"; }
+
 
     @GetMapping(path = "/chatsm")
     public String allChats(@AuthenticationPrincipal User user, Map<String,Object> model) {
@@ -44,13 +48,17 @@ public class ChatMController {
     }
 
     @PostMapping(path = "/chatsm", params = "add")
-    public String addUserInChat(@AuthenticationPrincipal User user, Long user_id){
+    public String addUserInChat(@AuthenticationPrincipal User user, Long user_id,Map<String, Object> model){
         users.add(user);
-       // while (true){
-            users.add(userRepo.findByUId(user_id));
+        if(!userRepo.existsById(user_id)){
+            model.put("e","User not found!");
+            return "chatsm";
+        }
+//            users.add(userRepo.findByUId(user_id));
+//            model.put("e",users);
             log.debug("user"+user_id+"добавлен в чат");
             return "redirect:/chatsm";
-        //}
+
     }
 
     @PostMapping(path = "/chatsm", params = "create")

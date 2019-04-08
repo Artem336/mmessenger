@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mm@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+    <root id="1">
+      <ServerVersion>11.2</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="mestest">
+      <ObjectId>16617</ObjectId>
+      <StateNumber>750</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="mm">
+      <ObjectId>16488</ObjectId>
+      <StateNumber>682</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1158</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|16551|16553|1
+sequence|table|16568|16570|1
+sequence|table|16582|16584|1
+sequence|table|16717|16719|1
+</Relations>
+    </database>
+    <database id="4" parent="1" name="postgres">
+      <ObjectId>13012</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>567</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="5" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <Replication>1</Replication>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="14" parent="3" name="information_schema">
+      <ObjectId>12716</ObjectId>
+      <StateNumber>366</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="15" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="3" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>360</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>1159</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="20" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="26" parent="3" name="plpgsql">
+      <ObjectId>12998</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>519</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="27" parent="19" name="chatM_ch_idM_seq">
+      <ObjectId>16657</ObjectId>
+      <StateNumber>851</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="28" parent="19" name="chattest_ch_id_seq">
+      <ObjectId>16640</ObjectId>
+      <StateNumber>807</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="29" parent="19" name="hibernate_sequence">
+      <ObjectId>16549</ObjectId>
+      <StateNumber>717</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="19" name="chatm_ch_idm_seq">
+      <ObjectId>16717</ObjectId>
+      <StateNumber>965</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="31" parent="19" name="chatt_ch_id_seq">
+      <ObjectId>16568</ObjectId>
+      <StateNumber>723</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="32" parent="19" name="message_m_id_seq">
+      <ObjectId>16582</ObjectId>
+      <StateNumber>726</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="33" parent="19" name="users_u_id_seq">
+      <ObjectId>16551</ObjectId>
+      <StateNumber>719</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="34" parent="19" name="chatm">
+      <ObjectId>16719</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1153</StateNumber>
+    </table>
+    <table id="35" parent="19" name="chatm_user">
+      <ObjectId>16805</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1093</StateNumber>
+    </table>
+    <table id="36" parent="19" name="chatt">
+      <ObjectId>16570</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>723</StateNumber>
+    </table>
+    <table id="37" parent="19" name="m_status">
+      <ObjectId>16600</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>728</StateNumber>
+    </table>
+    <table id="38" parent="19" name="message">
+      <ObjectId>16584</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>726</StateNumber>
+    </table>
+    <table id="39" parent="19" name="user_role">
+      <ObjectId>16560</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>721</StateNumber>
+    </table>
+    <table id="40" parent="19" name="users">
+      <ObjectId>16553</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>721</StateNumber>
+    </table>
+    <column id="41" parent="34" name="ch_idm">
+      <Position>1</Position>
+      <Comment>1111</Comment>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>965</StateNumber>
+      <DefaultExpression>nextval(&apos;chatm_ch_idm_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="42" parent="34" name="ch_name">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <StateNumber>1153</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="34" name="user_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>965</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="44" parent="34" name="chatm_pkey">
+      <ObjectId>16723</ObjectId>
+      <StateNumber>1153</StateNumber>
+      <ColNames>ch_idm</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="45" parent="34" name="chatm_pkey">
+      <ObjectId>16724</ObjectId>
+      <StateNumber>965</StateNumber>
+      <ColNames>ch_idm</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>chatm_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="46" parent="34" name="fkr71jmlokaug7t6qdsx12i00km">
+      <ObjectId>16725</ObjectId>
+      <StateNumber>966</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16553</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+    </foreign-key>
+    <column id="47" parent="35" name="ch_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1092</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="48" parent="35" name="user_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1092</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="49" parent="35" name="chatm_user_pkey">
+      <ObjectId>16808</ObjectId>
+      <StateNumber>1092</StateNumber>
+      <ColNames>ch_id
+user_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="50" parent="35" name="chatm_user_pkey">
+      <ObjectId>16809</ObjectId>
+      <StateNumber>1092</StateNumber>
+      <ColNames>ch_id
+user_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>chatm_user_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="51" parent="35" name="fkmhe757e73814o5fwtltlivpvv">
+      <ObjectId>16815</ObjectId>
+      <StateNumber>1094</StateNumber>
+      <ColNames>ch_id</ColNames>
+      <RefTableId>16719</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>chatm</RefTableName>
+      <RefKeyName>chatm_pkey</RefKeyName>
+      <RefColNames>ch_idm</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="35" name="fkns5df6nldtcof42wlbijkn5dm">
+      <ObjectId>16810</ObjectId>
+      <StateNumber>1093</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16553</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+    </foreign-key>
+    <column id="53" parent="36" name="ch_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>723</StateNumber>
+      <DefaultExpression>nextval(&apos;chatt_ch_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="54" parent="36" name="ch_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>723</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="55" parent="36" name="addressee_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>723</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="56" parent="36" name="user_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>723</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="57" parent="36" name="chatt_ch_id_uindex">
+      <ObjectId>16581</ObjectId>
+      <StateNumber>725</StateNumber>
+      <ColNames>ch_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="58" parent="36" name="chatt_pk">
+      <ObjectId>16574</ObjectId>
+      <StateNumber>723</StateNumber>
+      <ColNames>ch_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="59" parent="36" name="chatt_pk">
+      <ObjectId>16575</ObjectId>
+      <StateNumber>723</StateNumber>
+      <ColNames>ch_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>chatt_pk</UnderlyingIndexName>
+    </key>
+    <foreign-key id="60" parent="36" name="fklnfuwwn4eh337c0ju4hhhrboo">
+      <ObjectId>16576</ObjectId>
+      <StateNumber>723</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16553</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="61" parent="37" name="messageId">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>728</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="62" parent="37" name="userId">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>728</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="63" parent="37" name="is_read">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>728</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="64" parent="38" name="m_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>726</StateNumber>
+      <DefaultExpression>nextval(&apos;message_m_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="65" parent="38" name="content">
+      <Position>2</Position>
+      <DataType>char(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>726</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="66" parent="38" name="time_create">
+      <Position>3</Position>
+      <DataType>time|0s</DataType>
+      <StateNumber>726</StateNumber>
+      <TypeId>1083</TypeId>
+    </column>
+    <column id="67" parent="38" name="chat_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>726</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="68" parent="38" name="user_id">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>726</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="69" parent="38" name="message_pkey">
+      <ObjectId>16588</ObjectId>
+      <StateNumber>726</StateNumber>
+      <ColNames>m_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="70" parent="38" name="message_pkey">
+      <ObjectId>16589</ObjectId>
+      <StateNumber>726</StateNumber>
+      <ColNames>m_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>message_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="71" parent="38" name="message_chatm_ch_idm_fk">
+      <ObjectId>16830</ObjectId>
+      <StateNumber>1138</StateNumber>
+      <ColNames>chat_id</ColNames>
+      <RefTableId>16719</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>chatm</RefTableName>
+      <RefKeyName>chatm_pkey</RefKeyName>
+      <RefColNames>ch_idm</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="72" parent="38" name="message_users_u_id_fk">
+      <ObjectId>16825</ObjectId>
+      <StateNumber>1135</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16553</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="73" parent="39" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>721</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="74" parent="39" name="roles">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>721</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="75" parent="39" name="user_role_users_u_id_fk">
+      <ObjectId>16563</ObjectId>
+      <StateNumber>721</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16553</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>u_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="76" parent="40" name="u_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>719</StateNumber>
+      <DefaultExpression>nextval(&apos;users_u_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="77" parent="40" name="username">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>719</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="78" parent="40" name="password">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>719</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="79" parent="40" name="name">
+      <Position>4</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>719</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="80" parent="40" name="active">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>719</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="81" parent="40" name="users_pkey">
+      <ObjectId>16558</ObjectId>
+      <StateNumber>719</StateNumber>
+      <ColNames>u_id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="82" parent="40" name="users_pkey">
+      <ObjectId>16559</ObjectId>
+      <StateNumber>719</StateNumber>
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
