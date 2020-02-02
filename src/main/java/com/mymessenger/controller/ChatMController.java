@@ -4,7 +4,6 @@ import com.mymessenger.domain.ChatM;
 import com.mymessenger.domain.User;
 import com.mymessenger.repos.ChatMRepo;
 import com.mymessenger.repos.UserRepo;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -37,10 +36,8 @@ public class ChatMController {
 
     @GetMapping(path = "/chatsm")
     public String allChats(@AuthenticationPrincipal User user, Map<String,Object> model) {
-        log.debug("List chatsM from: "+user.getUId());
-        model.put("uName",user.getUsername());
+     model.put("uName",user.getUsername());
         model.put("uId",user.getUId());
-//        Iterable<ChatM> chats=chatMRepo.findByAuthorMOrderByChIdM(user);
         Iterable<ChatM> chats=chatMRepo.findByUsers(user);
 
         model.put("chatss",chats);
@@ -54,9 +51,6 @@ public class ChatMController {
             model.put("e","User not found!");
             return "chatsm";
         }
-//            users.add(userRepo.findByUId(user_id));
-//            model.put("e",users);
-            log.debug("user"+user_id+"добавлен в чат");
             return "redirect:/chatsm";
 
     }
@@ -79,12 +73,9 @@ public class ChatMController {
         chatMRepo.save(chatM);
         users.clear();
 
-        log.debug("created chat with name "+chatM.getChName());
 
-//        Iterable<ChatM> chats=chatMRepo.findByAuthorMOrderByChIdM(user);
         Iterable<ChatM> chats=chatMRepo.findByUsers(user);
         model.put("chatss",chats);
-        log.info("create chatm");
         return "chatsm";
 
 
