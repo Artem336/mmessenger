@@ -1,11 +1,8 @@
 package com.mymessenger.controller;
 
-
 import com.mymessenger.domain.Message;
 import com.mymessenger.domain.User;
 import com.mymessenger.repos.MessageRepo;
-
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -13,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.Map;
 
 @Controller
